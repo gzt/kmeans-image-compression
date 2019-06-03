@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# outputs from programs
+*.out
+block-master
+block-tiff
+logresults.txt
