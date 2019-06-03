@@ -48,3 +48,10 @@ Usage: ./block-tiff [-v] -i input-TIFF-file
  default for kmeans++ is -r 25, default for kmeans random starts is r 1000 
  default is to hash arguments as a seed 
 ```
+
+## Licensing
+
+* `write_tiff.*` is from http://paulbourke.net/dataformats/tiff/ with no license listed and the note 'Any source code found here may be freely used provided credits are given to the author.'
+* Mersenne Twister code is from    http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html and license
+ information is found in [`mt19937ar.c`](https://github.com/gzt/kmeans-image-compression/blob/master/mt19937ar.c)
+ * Everything else is GPLv3 unless otherwise noted.

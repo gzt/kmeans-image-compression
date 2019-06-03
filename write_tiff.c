@@ -8,6 +8,8 @@
 
 // Very simple TIFF writer based on
 // http://paulbourke.net/dataformats/tiff/
+// No license listed. 
+
 
 void WriteHexString(FILE *fptr,char *s)
 {

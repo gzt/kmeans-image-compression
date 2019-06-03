@@ -78,40 +78,5 @@ struct data_obj {
 	unsigned int p;	/*!< number of columns in matrix */
 };
 
-typedef double (*object_distance_function)(unsigned int, unsigned int, void *);
-typedef double (*distance_function)(double *, double *, unsigned int);
-
-/* distance calculations */
-double estimate_average_pairwise_distance(object_distance_function dist, unsigned int n, unsigned int max_iter, double epsilon, void *obj);
-double sqdist(double *x, double *y, unsigned int p);
-double dist(double *x, double *y, unsigned int p);
-double sq_norm(double *, unsigned int);
-double l1norm(double *x, double *y, unsigned int p);
-double normalized_dist(double *x, double *y, double *omega, unsigned int p);
-
-/* data transformation */
-int unstandardize_data(double **x, unsigned int n, unsigned int p,  double *mu, double *sd);
-int standardize_data(double **x, unsigned int n, unsigned int p, double **in_mu, double **in_sd, int transform_data, int scaling);
-
-unsigned int minindex(double *x, unsigned int n);
-int unique_points(unsigned int *y, unsigned int i, void *d);
-int shuffle(unsigned int *array, unsigned int n);
-
-/* k-means-related */
-int check_wss(unsigned int, unsigned int, double *, double *, double *, unsigned int *, unsigned int *, double *, unsigned int *, unsigned int *);
-void reset_wss(double *w, unsigned int k);
-unsigned int null_cluster_downgrade(double **x, double **centers, unsigned int n, unsigned int p, unsigned int k, double *dis, unsigned int *sd_idx, int free);
-
-double elapsed_seconds(struct timeval *x, struct timeval *y);
-
-int error(int errnum, int do_exit, const char *filename, const char *fxn_name, int line_no, const char *message, ...);
-
-char *string_copy(const char *);
-
-/* io-related */
-int check_newline(FILE *finp, const char *filename, const char *file, const char *fxn_name, int line_no);
-char *make_full_filename(const char *path, const char *name);
-const char *remove_path(const char *fullPath);	/* from optlist version 3 */
-
 
 #endif
