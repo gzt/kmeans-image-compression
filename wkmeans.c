@@ -196,8 +196,8 @@ void woptra(double **a, unsigned int m, unsigned int n, double *weights, double 
   unsigned int i, j, l, l1, l2, ll, flag;
   double r2, da, db, dc, dd, de, df, rr, al1, al2, alt, alw;
   double an2l2;
-  double an2l1;
-  double an1l2;
+  //double an2l1;
+  //double an1l2;
   double an1l1;
   
   /* ALGORITHM AS 136.1  APPL. STATIST. (1979) VOL.28, NO.1 
@@ -224,13 +224,13 @@ void woptra(double **a, unsigned int m, unsigned int n, double *weights, double 
     l2 = ic2[i];
     ll = l2;
     an2l2 = nc[l2]/(nc[l2] + weights[i]);
-    an2l1 = nc[l2]/(nc[l1] + weights[i]);
-    an1l2 = BIG;
+    // an2l1 = nc[l2]/(nc[l1] + weights[i]);
+    //an1l2 = BIG;
     an1l1 = BIG;
     if(weights[i] > 0.){		
-      if (nc[l2] > weights[i]){
-	an1l2 = nc[l2] / (nc[l2]-weights[i]);
-      }
+      //if (nc[l2] > weights[i]){
+      //	an1l2 = nc[l2] / (nc[l2]-weights[i]);
+      //}
       if (nc[l1] > weights[i]){
 	an1l1 = nc[l1] / (nc[l1]-weights[i]);
       }
@@ -340,8 +340,8 @@ void wqtran(double **a,unsigned int m,unsigned int n,double *weights, double **c
   istep = 0;
   iflag=0;
   double an2l2 ;
-  double an2l1 ;
-  double an1l2 ;
+  //double an2l1 ;
+  //double an1l2 ;
   double an1l1 ;
   while (iflag==0) {
     /*Remove this as iflag creates an endless loop since it never gets updated. No!*/
@@ -354,12 +354,12 @@ void wqtran(double **a,unsigned int m,unsigned int n,double *weights, double **c
 	l1 = ic1[i];
 	l2 = ic2[i];
 	an2l2 = nc[l2]/(nc[l2] + weights[i]);
-	an2l1 = nc[l2]/(nc[l1] + weights[i]);
-	an1l2 = BIG;
+	//an2l1 = nc[l2]/(nc[l1] + weights[i]);
+	//an1l2 = BIG;
 	an1l1 = BIG;
-	if (nc[l2] > weights[i]){
-	  an1l2 = nc[l2] / (nc[l2]-weights[i]);
-	}
+	//if (nc[l2] > weights[i]){
+	//  an1l2 = nc[l2] / (nc[l2]-weights[i]);
+	//}
 	if (nc[l1] > weights[i]){
 	  an1l1 = nc[l1] / (nc[l1]-weights[i]);
 	}
