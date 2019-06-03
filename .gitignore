@@ -56,3 +56,4 @@ dkms.conf
 block-master
 block-tiff
 logresults.txt
+*.kmns
