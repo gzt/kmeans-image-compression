@@ -30,3 +30,21 @@ There is another program called `block-master` which takes in a text file repres
 image which was used for some of the images in the corresponding paper. This is included
 for the sake of reproducibility. 
 
+```
+Usage: ./block-tiff [-v] -i input-TIFF-file 
+ -o output-TIFF-file 
+ -k number-clusters 
+ [-n] number of tries 
+ -p block size 
+ [-m] initialization method (1 = kmeans||, 2 = kmeans++, 3 = kmeans random starts) 
+ [-r] initialization rounds 
+ [-l] for kmeans|| centers per round 
+ [-L] for kmeans|| multiplication factor (k*L = l), only specify one of L and l 
+ [-s] seed file for PRNG (takes two seeds) 
+ [-S] seed file for PRNG, plus hash of arguments to seed 
+ [-t] uses time(NULL) and getpid() as a seed 
+  Note: -v indicates debugging option, default for -n = 1000, default for -m = 1
+ default is for L=2 and r=5 for kmeans||
+ default for kmeans++ is -r 25, default for kmeans random starts is r 1000 
+ default is to hash arguments as a seed 
+```
