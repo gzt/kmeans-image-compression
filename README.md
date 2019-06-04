@@ -54,4 +54,5 @@ Usage: ./block-tiff [-v] -i input-TIFF-file
 * `write_tiff.*` is from http://paulbourke.net/dataformats/tiff/ with no license listed and the note 'Any source code found here may be freely used provided credits are given to the author.'
 * Mersenne Twister code is from    http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html and license
  information is found in [`mt19937ar.c`](https://github.com/gzt/kmeans-image-compression/blob/master/mt19937ar.c)
- * Everything else is GPLv3 unless otherwise noted.
+* `baboon.tiff` is from http://sipi.usc.edu/database/database.php?volume=misc
+* Everything else is GPLv3 unless otherwise noted.
