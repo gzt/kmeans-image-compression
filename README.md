@@ -20,11 +20,12 @@ For example, on the included test image, you may try:
 `./kmeans-compress.sh -i baboon.tiff -o baboon-test.tiff -p 5 -k 50`
 
 There are additional options controlling other settings (method of initialization of clustering,
-assigning seeds, etc). It outputs a TIFF version of the compressed image and and a file
+assigning seeds, etc). It outputs a TIFF version of the compressed image and a file
 representing the compressed version of the input image. The program also writes some diagnostic
 information to `logresults.txt`. This works by passing your arguments to `block-tiff` and then 
 compressing the output using the `zpaq` library. The zpaq-compressed output is saved as 
-`block-output.kmns`. The uncompressed binary files are saved as `.out` files. A text file,
+`outputimage.kmns`, taken from the `-o` argument. 
+The uncompressed binary files are saved as `.out` files. A text file,
 `block-means-text.out`, of the first-stage means is provided as well for diagnostic purposes.
 There is another program called `block-master` which takes in a text file representation of an 
 image which was used for some of the images in the corresponding paper. This is included
@@ -49,9 +50,12 @@ Usage: ./block-tiff [-v] -i input-TIFF-file
  default is to hash arguments as a seed 
 ```
 
+A library of example images will be posted soon with DOI `10.5281/zenodo.3234043` when ready.
+
 ## Licensing
 
-* `write_tiff.*` is from http://paulbourke.net/dataformats/tiff/ with no license listed and the note 'Any source code found here may be freely used provided credits are given to the author.'
+* `write_tiff.*` is from http://paulbourke.net/dataformats/tiff/ with no license listed and the note 
+'Any source code found here may be freely used provided credits are given to the author.'
 * Mersenne Twister code is from    http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html and license
  information is found in [`mt19937ar.c`](https://github.com/gzt/kmeans-image-compression/blob/master/mt19937ar.c)
 * `baboon.tiff` is from http://sipi.usc.edu/database/database.php?volume=misc
