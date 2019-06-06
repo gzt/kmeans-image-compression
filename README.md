@@ -60,3 +60,8 @@ A library of example images will be posted soon with DOI `10.5281/zenodo.3234043
  information is found in [`mt19937ar.c`](https://github.com/gzt/kmeans-image-compression/blob/master/mt19937ar.c)
 * `baboon.tiff` is from http://sipi.usc.edu/database/database.php?volume=misc
 * Everything else is GPLv3 unless otherwise noted.
+
+
+## Other links
+* See [ZPAQ](http://mattmahoney.net/dc/zpaq.html) for more information about the lossless compression
+used here.
